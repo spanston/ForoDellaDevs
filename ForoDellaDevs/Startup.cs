@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ForoDellaDevs.Data;
+using ForoDellaDevs.Service;
 
 namespace ForoDellaDevs
 {
@@ -36,6 +37,9 @@ namespace ForoDellaDevs
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //Anytime a class ask for implementation for forumservice, can go ahead to use it.
+            services.AddScoped<IForum, ForumService>(); 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

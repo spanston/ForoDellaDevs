@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ForoDellaDevs.Data\ForoDellaDevs.Data.csproj" />
+    <ProjectReference Include="..\ForoDellaDevs.Service\ForoDellaDevs.Service.csproj" />
   </ItemGroup>
 
 </Project>
