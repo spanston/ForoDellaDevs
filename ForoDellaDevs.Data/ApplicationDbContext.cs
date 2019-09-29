@@ -11,7 +11,7 @@ namespace ForoDellaDevs.Data
             : base(options)
         {
         }
-        //public DbSet<ApplicationUser> Applicationusers { get; set; }
+        public DbSet<IdentityUser> IdentityUsers { get; set; }
         public DbSet<Forum> Forums { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostReply> PostReplies { get; set; }
