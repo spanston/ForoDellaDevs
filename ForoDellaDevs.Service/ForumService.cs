@@ -23,13 +23,13 @@ namespace ForoDellaDevs.Service
 
         public Task Delete(int forumId)
         {
-            //Due to the virtual posts in the Forums model, we'll need to include them.
-            return _context.Forums.Include(forum => forum.Posts);
+            throw new NotImplementedException();
         }
 
         public IEnumerable<Forum> GetAll()
         {
-            throw new NotImplementedException();
+            //Due to the virtual posts in the Forums model, we'll need to include them.
+            return _context.Forums.Include(forum => forum.Posts);
         }
 
         public IEnumerable<IdentityUser> GetAllActiveUsers()
