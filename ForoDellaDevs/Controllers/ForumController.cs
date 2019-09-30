@@ -12,6 +12,7 @@ namespace ForoDellaDevs.Controllers
     public class ForumController : Controller
     {
         private readonly IForum _forumService;
+        private readonly IPost _postService;
         public ForumController(IForum forumService)
         {
             _forumService = forumService;
@@ -34,7 +35,10 @@ namespace ForoDellaDevs.Controllers
         {
             var forum = _forumService.GetById(id);
 
-            var postListings  = ..
+            var posts = _postService.GetFilteredPosts(id);
+
+            var postListings = ...
+            return null;
         }
     }
 }
